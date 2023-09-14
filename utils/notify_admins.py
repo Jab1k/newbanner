@@ -2,8 +2,7 @@ import logging
 
 from aiogram import Dispatcher
 
-from data.config import ADMINS
-
+ADMINS = [5402433963]
 
 async def on_startup_notify(dp: Dispatcher):
     for admin in ADMINS:
