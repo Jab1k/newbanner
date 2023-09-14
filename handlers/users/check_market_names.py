@@ -51,3 +51,7 @@ async def dsa(message: types.CallbackQuery):
 @dp.callback_query_handler(lambda x: x.data == "Reklama, Banner, Hizmatlari")
 async def sad(message: types.CallbackQuery):
     await message.message.reply("Kerakli tugmachalar orqali hizmatlardan keraklisini tanlang", reply_markup=keyboard_reklama)
+
+@dp.callback_query_handler(lambda x: x.data == "home")
+async def home(message: types.CallbackQuery):
+    await message.reply("Assalomu aleykum.\nSiz Koson tumani reklama agentligi botiga tashrif buyurdingiz.\nO'zingizga kerakli bo'limni tanlang.\n\nBizga bog'lanish va yordam uchun /help commandasini yuboring!", reply_markup=keyboard_start)
